@@ -5,7 +5,7 @@ const router = express.Router();
 
 /* Application routes */
 
-//? default api
+//? default route api
 router.get("/", defaultController);
 
 module.exports = router;
