@@ -1,6 +1,7 @@
 const User = require("../models/userModel");
 const bcrypt = require("bcrypt");
 
+//? register a new user
 const registerUser = async (req, res) => {
     try {
         const data = req.body;
@@ -23,9 +24,10 @@ const registerUser = async (req, res) => {
 
             res.status(200).json({
                 success: true,
-                message: "User successfully created.",
+                message: "User registration successfull.",
                 data: user
             })
+
         } else {
             res.status(500).json({
                 success: false,
@@ -42,6 +44,12 @@ const registerUser = async (req, res) => {
     }
 }
 
+//? login a user
+const loginUser = async (req, res) => {
+
+}
+
 module.exports = {
-    registerUser
+    registerUser,
+    loginUser
 }
