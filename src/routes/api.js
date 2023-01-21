@@ -5,8 +5,13 @@ const {
     loginUser
 } = require("../controller/userController");
 const {
-    createBrand, getBrandList
+    createBrand,
+    getBrandList
 } = require('../controller/brandController');
+const {
+    createCategory,
+    getCategoryList
+} = require('../controller/categoryController');
 
 const router = express.Router();
 
@@ -30,5 +35,13 @@ router.post("/create-brand", createBrand)
 
 //? get all brand list
 router.get("/get-brand-list", getBrandList)
+
+//todo: category api
+
+//? create category
+router.post("/create-category", createCategory)
+
+//? get all category list
+router.get("/get-category-list", getCategoryList)
 
 module.exports = router;
