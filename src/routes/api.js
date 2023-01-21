@@ -12,6 +12,10 @@ const {
     createCategory,
     getCategoryList
 } = require('../controller/categoryController');
+const {
+    createCustomer,
+    getCustomerList
+} = require('../controller/customerController');
 
 const router = express.Router();
 
@@ -43,5 +47,13 @@ router.post("/create-category", createCategory)
 
 //? get all category list
 router.get("/get-category-list", getCategoryList)
+
+//todo: customer api
+
+//? create customer
+router.post("/create-customer", createCustomer)
+
+//? get all customer list
+router.get("/get-customer-list", getCustomerList)
 
 module.exports = router;
