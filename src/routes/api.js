@@ -4,6 +4,9 @@ const {
     registerUser,
     loginUser
 } = require("../controller/userController");
+const {
+    createBrand, getBrandList
+} = require('../controller/brandController');
 
 const router = express.Router();
 
@@ -19,5 +22,13 @@ router.post("/register-user", registerUser)
 
 //? login a user
 router.post("/login-user", loginUser)
+
+//todo: brand api
+
+//? create a brand
+router.post("/create-brand", createBrand)
+
+//? get all brand list
+router.get("/get-brand-list", getBrandList)
 
 module.exports = router;
