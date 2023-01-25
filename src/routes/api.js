@@ -20,6 +20,8 @@ const {
     createSupplier,
     getSupplierList
 } = require('../controller/supplierController');
+const { createExpenseType } = require('../controller/expensetypeController');
+const { createExpense, getExpenseList } = require('../controller/expenseController');
 
 const router = express.Router();
 
@@ -67,5 +69,18 @@ router.post("/create-supplier", createSupplier)
 
 //? get all supplier list
 router.get("/get-supplier-list", getSupplierList)
+
+//todo: expense type api
+
+//? create expense type
+router.post("/create-expense-type", createExpenseType)
+
+//todo: expense api
+
+//? create expense
+router.post("/create-expense", createExpense)
+
+//? get expense
+router.get("/get-expense-list", getExpenseList)
 
 module.exports = router;
